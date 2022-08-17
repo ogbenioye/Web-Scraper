@@ -12,7 +12,7 @@ import (
 
 func main() {
 
-	file, err := os.Create("porte002.csv")
+	file, err := os.Create("porte001.csv")
 	if err != nil {
 		log.Fatalf("Could not create file: %q\n", err)
 	}
@@ -33,12 +33,6 @@ func main() {
 		writer.Write([]string{
 			e.ChildText(".product-item-info > .product-item-details > h2 > a"),
 			e.ChildText(".product-item-info > .product-item-details > .price-box > .normal-price > .price-container > .price-wrapper > .price"),
-		})
-	})
-
-	c.OnHTML("img[src]", func(e *colly.HTMLElement) {
-		writer.Write([]string{
-			e.Attr("src"),
 		})
 	})
 
