@@ -8,5 +8,5 @@ Here is how the app works in 5 stages:
 1. The app creates and opens a file
 2. Using Colly, it accesses the allowed domain(s) and sends requests to the domain(s).
 3. Using HTML tags, class and ids to identify the targeted data, the app scrapes the data on that page and writes it into the opened file.
-4. It visits and sends requests to other pages specified and repeats step 3.
+4. It visits and sends requests to other pages specified and repeats the 3rd stage.
 5. Closes the file and exits program.
